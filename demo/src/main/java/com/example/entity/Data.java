@@ -1,22 +1,30 @@
 package com.example.entity;
 
+import lombok.Getter;
+
 /**
  * @ClassName: Data
  * @Author: Richard_Chen
  * @Create: 2022-10-19 11:35
  */
 public class Data {
-
+    @Getter
     private static int counter = 0;
-
-    public static int getCounter() {
-        return counter;
-    }
+    /**
+     * 解决线程安全问题
+     */
+    private static Object locker = new Object();
 
     public static void reset(){
         counter = 0;
     }
     public synchronized void wrong(){
         counter++;
+    }
+
+    public void right(){
+        synchronized (locker){
+            counter++;
+        }
     }
 }
