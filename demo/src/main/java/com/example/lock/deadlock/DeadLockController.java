@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ThreadLocalRandom;
@@ -80,7 +81,7 @@ public class DeadLockController {
                 if (item.lock.tryLock(10, TimeUnit.SECONDS)){
                     locks.add(item.lock);
                 }else {
-                    locks.forEach(ReentrantLock::lock);
+                    locks.forEach(ReentrantLock::unlock);
                     return false;
                 }
             } catch (InterruptedException e) {
@@ -91,7 +92,7 @@ public class DeadLockController {
         try {
             order.forEach(item -> item.remaining--);
         }finally {
-            locks.forEach(ReentrantLock::lock);
+            locks.forEach(ReentrantLock::unlock);
         }
         return true;
     }
@@ -134,6 +135,40 @@ public class DeadLockController {
         // item5=DeadLockController.Item(name=item5, remaining=999)}
         // 100次下单成功了2次，10间商品总计10000件，库存剩余9994件，消耗6件符合预期(2次下单，每次3件) 耗时90秒+
         // 使用JDK自带的VisualVM工具跟踪，就可以看到提示出现了线程死锁
+        // 那为什么会有死锁问题呢?
+        // 我们仔细回忆一下购物车添加商品的逻辑，随机添加了三种商品，假设一个购物车中的商品是
+        // item1和item2,另一个购物车中的商品是item2和item1,一个线程先获取到了item1的锁，
+        // 同时另-个线程获取到了item2的锁，然后两个线程接下来要分别获取item2和item1
+        // 的锁，这个时候锁已经被对方获取了，只能相互等待一直到10秒超时。
+        log.info("success:{}, totalRemaining:{}, took:{}ms, items:{}",
+                success,
+                items.entrySet().stream().map(item -> item.getValue().remaining).reduce(0, Integer::sum),
+                System.currentTimeMillis() - begin,
+                items);
+        return success;
+    }
+
+    /**
+     * 其实,避免死锁的方案很简单，为购物车中的商品排一下序， 让所有的线程一定是先获取
+     * item1的锁然后获取item2的锁，就不会有问题了。
+     * 所以,我只需要修改一行代码,对createCart获得的购物车按照商品名进行排序即可:
+     * success:100, totalRemaining:9700, took:6ms, items:...
+     * 日志结果： 不管执行多少次都是100次下单成功，且性能极高。
+     * @return long
+     */
+    @GetMapping("/right")
+    public long right(){
+        long begin = System.currentTimeMillis();
+        // 并发进行100次下单操作，并统计下单成功次数
+        long success = IntStream.rangeClosed(1, 100).parallel()
+                .mapToObj(i -> {
+                    List<Item> cart = createCart().stream()
+                            .sorted(Comparator.comparing(Item::getName))
+                            .collect(Collectors.toList());
+                    return createOrder(cart);
+                })
+                .filter(result -> result)
+                .count();
         log.info("success:{}, totalRemaining:{}, took:{}ms, items:{}",
                 success,
                 items.entrySet().stream().map(item -> item.getValue().remaining).reduce(0, Integer::sum),
