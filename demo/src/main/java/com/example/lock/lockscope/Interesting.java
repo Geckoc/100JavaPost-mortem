@@ -1,9 +1,8 @@
-package com.example.services;
+package com.example.lock.lockscope;
 
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @ClassName: Lock2Dot2Service
  * @Description: 分享一个有趣的案例吧。
  * 有一天, 一位同学在群里说"见鬼了，疑似遇到了一个JVM的Bug" , 我们都很好奇是什么Bug。
  * 于是，他贴出了这样一段代码:在一个类里有两个int类型的字段a和b,有一个add方法循环1万次
@@ -11,11 +10,10 @@ import lombok.extern.slf4j.Slf4j;
  * 他起了两个线程来分别执行add和compare方法。
  * 按道理，a和b同样进行累加操作，应该始终相等，compare 中的第一次判断应该始终不会成立，不会输出任何日志。
  * 但执行代码后发现不但输出了日志,而且更诡异的是, compare方法在判断 a<b 成立的情况下还输出了 a>b 也成立:
- * @Author: Richard_Chen
  * @Create: 2022-10-19 14:51
  */
 @Slf4j
-public class Lock2Dot2Service {
+public class Interesting {
 
     volatile int a = 1;
     volatile int b = 1;
@@ -61,7 +59,7 @@ public class Lock2Dot2Service {
      * @param args
      */
     public static void main(String[] args) {
-        Lock2Dot2Service lock2Dot2Service = new Lock2Dot2Service();
+        Interesting lock2Dot2Service = new Interesting();
         new Thread(() -> lock2Dot2Service.add()).start();
         new Thread(() -> lock2Dot2Service.compare()).start();
     }

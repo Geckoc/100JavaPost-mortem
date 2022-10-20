@@ -1,10 +1,9 @@
-package com.example.entity;
+package com.example.lock.lockscope;
 
 import lombok.Getter;
 
 /**
  * @ClassName: Data
- * @Author: Richard_Chen
  * @Create: 2022-10-19 11:35
  */
 public class Data {

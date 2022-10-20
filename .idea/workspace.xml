@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae0dfd98-dc07-44a9-ac18-99ee66b85998" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/controller/Lock02Dot2Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/services/Lock2Dot2Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/lock/deadlock/DeadLockController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/lock/lockgranularity/LockGranularityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/lock/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/controller/Lock02Dot2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/entity/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/entity/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/controller/Lock02Dot2Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/lock/lockscope/LockScopeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/entity/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/lock/lockscope/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/services/Lock2Dot2Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/lock/lockscope/Interesting.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/demo/target/" />
@@ -25,39 +21,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/controller/Lock02Dot2Controller.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/lock/lockscope/LockScopeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-522">
-              <caret line="180" column="5" selection-start-line="180" selection-start-column="5" selection-end-line="180" selection-end-column="5" />
+            <state relative-caret-position="453">
+              <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#wrong#0;class#Lock#0" />
-                <element signature="method#wrong1#0;class#Lock02Dot2#0" />
-                <element signature="method#right#0;class#Lock02Dot2#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/pom.xml">
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/lock/deadlock/DeadLockController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/services/Lock2Dot2Service.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+            <state relative-caret-position="287">
+              <caret line="135" column="39" selection-start-line="135" selection-start-column="39" selection-end-line="135" selection-end-column="39" />
               <folding>
-                <element signature="method#add#0;class#Lock2Dot2Service#0" />
-                <element signature="method#compare#0;class#Lock2Dot2Service#0" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1409#1410#0" expanded="true" />
+                <element signature="e#1505#1506#0" expanded="true" />
+                <element signature="method#createOrder#0;class#DeadLockController#0" />
               </folding>
             </state>
           </provider>
@@ -71,6 +56,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindBugs-IDEA-Workspace">
+    <toolWindowEditorPreview>false</toolWindowEditorPreview>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -86,7 +74,6 @@
         <option value="$PROJECT_DIR$/demo/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/DemoApplication.java" />
         <option value="$PROJECT_DIR$/demo/src/main/java/com/example/controller/Lock.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/com/example/entity/Data.java" />
         <option value="$PROJECT_DIR$/demo/src/main/resources/log4j.xml" />
         <option value="$PROJECT_DIR$/demo/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/demo/src/main/java/com/example/controller/Lock02Dot2.java" />
@@ -94,6 +81,16 @@
         <option value="$PROJECT_DIR$/demo/src/main/java/com/example/services/Lock2Dot2Service.java" />
         <option value="$PROJECT_DIR$/demo/src/main/java/com/example/entity/Item.java" />
         <option value="$PROJECT_DIR$/demo/src/main/java/com/example/controller/Lock02Dot2Controller.java" />
+        <option value="$PROJECT_DIR$/demo/src/main/java/com/example/entity/Data.java" />
+        <option value="$PROJECT_DIR$/demo/src/main/java/com/example/lock/lockscope/Data.java" />
+        <option value="$PROJECT_DIR$/demo/src/main/java/com/example/lock/lockscope/Lock2Dot2Service.java" />
+        <option value="$PROJECT_DIR$/demo/src/main/java/com/example/lock/lockscope/Interesting.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/demo/src/main/java/com/example/controller/LockScopeController.java" />
+        <option value="$PROJECT_DIR$/demo/src/main/java/com/example/lock/readme.md" />
+        <option value="$PROJECT_DIR$/demo/src/main/java/com/example/lock/lockgranularity/LockGranularityController.java" />
+        <option value="$PROJECT_DIR$/demo/src/main/java/com/example/lock/lockscope/LockScopeController.java" />
+        <option value="$PROJECT_DIR$/demo/src/main/java/com/example/lock/deadlock/DeadLockController.java" />
       </list>
     </option>
   </component>
@@ -123,8 +120,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -186,17 +181,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="java100postmortem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java100postmortem" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -208,7 +192,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
+              <item name="lock" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="java100postmortem" type="b2602c69:ProjectViewProjectNode" />
@@ -216,12 +200,18 @@
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="lock" type="462c0819:PsiDirectoryNode" />
+              <item name="lockscope" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -231,7 +221,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1666169493193" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1666238711796" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -250,12 +240,12 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.DemoApplication">
-    <configuration name="Lock2Dot2Service" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.services.Lock2Dot2Service" />
+    <configuration name="Interesting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.lock.lockscope.Interesting" />
       <module name="demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.services.*" />
+          <option name="PATTERN" value="com.example.lock.lockscope.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -298,7 +288,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Lock2Dot2Service" />
+        <item itemvalue="Application.Interesting" />
         <item itemvalue="JUnit.DemoApplicationTests.contextLoads" />
         <item itemvalue="Application.Main" />
       </list>
@@ -318,7 +308,8 @@
       <workItem from="1666149065842" duration="469000" />
       <workItem from="1666149604292" duration="37000" />
       <workItem from="1666149662918" duration="204000" />
-      <workItem from="1666149889206" duration="14894000" />
+      <workItem from="1666149889206" duration="15146000" />
+      <workItem from="1666234412068" duration="4285000" />
     </task>
     <servers />
   </component>
@@ -328,13 +319,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16388000" />
+    <option name="totallyTimeSpent" value="20925000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="66" y="-8" width="1862" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2608213" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.263596" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -342,11 +333,10 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Spring" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.20940171" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.44337606" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.5662393" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -359,6 +349,7 @@
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info anchor="bottom" id="Java Enterprise" order="15" />
+      <window_info anchor="bottom" id="Spring" order="16" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -374,45 +365,14 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#64#65#0" expanded="true" />
-            <element signature="e#114#115#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/web.xml" />
+    <entry file="file://$PROJECT_DIR$/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/demo/.gitignore" />
     <entry file="file://$PROJECT_DIR$/java100postmortem.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/mvnw">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/HELP.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/mvnw" />
+    <entry file="file://$PROJECT_DIR$/demo/HELP.md" />
     <entry file="file://$PROJECT_DIR$/demo/src/main/resources/application-dev.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -455,27 +415,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/entity/Data.java">
+    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/entity/Item.java" />
+    <entry file="file://$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+        <state relative-caret-position="-275" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
           <folding>
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#367#368#0" expanded="true" />
-            <element signature="e#405#406#0" expanded="true" />
-            <element signature="e#430#431#0" expanded="true" />
+            <element signature="e#64#65#0" expanded="true" />
+            <element signature="e#114#115#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/DemoApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#420#421#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="196">
+            <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -487,36 +450,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/services/Lock2Dot2Service.java">
+    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/lock/lockgranularity/LockGranularityController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-          <folding>
-            <element signature="method#add#0;class#Lock2Dot2Service#0" />
-            <element signature="method#compare#0;class#Lock2Dot2Service#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/entity/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="30" selection-end-column="1" />
+        <state relative-caret-position="-1675">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/controller/Lock02Dot2Controller.java">
+    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/lock/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="112">
+            <caret line="4" column="13" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="13" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/lock/lockscope/LockScopeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-522">
-          <caret line="180" column="5" selection-start-line="180" selection-start-column="5" selection-end-line="180" selection-end-column="5" />
+        <state relative-caret-position="453">
+          <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#wrong#0;class#Lock#0" />
-            <element signature="method#wrong1#0;class#Lock02Dot2#0" />
-            <element signature="method#right#0;class#Lock02Dot2#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/DemoApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#420#421#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/lock/lockscope/Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/lock/lockscope/Interesting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/lock/deadlock/DeadLockController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="135" column="39" selection-start-line="135" selection-start-column="39" selection-end-line="135" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1409#1410#0" expanded="true" />
+            <element signature="e#1505#1506#0" expanded="true" />
+            <element signature="method#createOrder#0;class#DeadLockController#0" />
           </folding>
         </state>
       </provider>
