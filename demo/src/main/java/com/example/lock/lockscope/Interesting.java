@@ -2,6 +2,9 @@ package com.example.lock.lockscope;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * @Description: 分享一个有趣的案例吧。
  * 有一天, 一位同学在群里说"见鬼了，疑似遇到了一个JVM的Bug" , 我们都很好奇是什么Bug。
@@ -59,9 +62,12 @@ public class Interesting {
      * @param args
      */
     public static void main(String[] args) {
-        Interesting lock2Dot2Service = new Interesting();
-        new Thread(() -> lock2Dot2Service.add()).start();
-        new Thread(() -> lock2Dot2Service.compare()).start();
+//        Interesting lock2Dot2Service = new Interesting();
+//        new Thread(() -> lock2Dot2Service.add()).start();
+//        new Thread(() -> lock2Dot2Service.compare()).start();
+        int[] arr = {1,2,3};
+        List<int[]> ints = Arrays.asList(arr);
+        log.info("list:{} size:{} class:{}", ints, ints.size(), ints.get(0).getClass());
     }
 
 
