@@ -1,4 +1,0 @@
-server:
-  port: 10028
-  tomcat:
-    uri-encoding: UTF-8

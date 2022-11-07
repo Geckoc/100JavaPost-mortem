@@ -62,12 +62,9 @@ public class Interesting {
      * @param args
      */
     public static void main(String[] args) {
-//        Interesting lock2Dot2Service = new Interesting();
-//        new Thread(() -> lock2Dot2Service.add()).start();
-//        new Thread(() -> lock2Dot2Service.compare()).start();
-        int[] arr = {1,2,3};
-        List<int[]> ints = Arrays.asList(arr);
-        log.info("list:{} size:{} class:{}", ints, ints.size(), ints.get(0).getClass());
+        Interesting lock2Dot2Service = new Interesting();
+        new Thread(() -> lock2Dot2Service.add()).start();
+        new Thread(() -> lock2Dot2Service.compare()).start();
     }
 
 
