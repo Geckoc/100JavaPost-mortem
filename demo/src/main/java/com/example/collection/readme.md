@@ -5,4 +5,4 @@
 + 使用List.subList进行切片操作居然会导致OOM：sublist
 + 一定要让合适的数据结构做合适的事情：listvsmap、linkedlist
 
-思考题：listremove
+思考题：listremove   
