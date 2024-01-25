@@ -4,7 +4,7 @@
 100个案例、约130个小坑，其中40%来自于我经历过或者是见过的200多个线上生产事故，剩下的60%来自于我开发业务项目，以及日常审核别人的代码发现的问题。贴近实际，而不是讲述过时的或日常开发根本用不到的技术或框架。
 
 ### 代码篇
-+ 01 使用了并发工具类库，线程安全就高枕无忧了吗？：concurrenttool
++ 01 使用了并发工具类库，线程安全就高枕无忧了吗？：[concurrenttool](https://github.com/Geckoc/100JavaPost-mortem/tree/master/demo/src/main/java/com/example/concurrenttool)
 + 02 代码加锁：不要让“锁”事成为烦心事：lock
 + 03 线程池：业务代码最常用也最容易犯错的组件：threadpool
 + 04 连接池：别让连接池帮了倒忙：connectionpool
