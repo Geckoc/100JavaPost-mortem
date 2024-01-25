@@ -5,15 +5,15 @@
 
 ### 代码篇
 + 01 使用了并发工具类库，线程安全就高枕无忧了吗？：[concurrenttool](https://github.com/Geckoc/100JavaPost-mortem/tree/master/demo/src/main/java/com/example/concurrenttool)
-+ 02 代码加锁：不要让“锁”事成为烦心事：lock
-+ 03 线程池：业务代码最常用也最容易犯错的组件：threadpool
-+ 04 连接池：别让连接池帮了倒忙：connectionpool
++ 02 代码加锁：不要让“锁”事成为烦心事：[lock](https://github.com/Geckoc/100JavaPost-mortem/tree/master/demo/src/main/java/com/example/lock)
++ 03 线程池：业务代码最常用也最容易犯错的组件：[threadpool](https://github.com/Geckoc/100JavaPost-mortem/tree/master/demo/src/main/java/com/example/threadpool)
++ 04 连接池：别让连接池帮了倒忙：[connectionpool]()
 + 05 HTTP调用：你考虑到超时、重试、并发了吗？：httpinvoke
 + 06 20%的业务代码的Spring声明式事务，可能都没处理正确：transaction
 + 07 数据库索引：索引不是万能药：sqlindex
 + 08 判等问题：程序里如何确定你就是你？：equals
 + 09 数值计算：注意精度、舍入和溢出问题：numeralcalculations
-+ 10 集合类：坑满地的List列表操作：collection
++ 10 集合类：坑满地的List列表操作：[collection](https://github.com/Geckoc/100JavaPost-mortem/tree/master/demo/src/main/java/com/example/collection)
 + 11 空值处理：分不清楚的null和恼人的空指针：nullvalue
 + 12 异常处理：别让自己在出问题的时候变为瞎子：exception
 + 13 日志：日志记录真没你想象的那么简单：logging
